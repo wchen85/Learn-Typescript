@@ -16,6 +16,7 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
 const router = Router();
 
 router.get('/', (req: Request, res: Response) => {
+  console.log('you are here!');
   if (req.session && req.session.loggedIn) {
     res.send(`
     <div>You are logged in</div>

@@ -13,6 +13,7 @@ function requireAuth(req, res, next) {
 var router = express_1.Router();
 exports.router = router;
 router.get('/', function (req, res) {
+    console.log('you are here!');
     if (req.session && req.session.loggedIn) {
         res.send("\n    <div>You are logged in</div>\n    <a href=\"/logout\">Logout</a>\n    ");
     }
